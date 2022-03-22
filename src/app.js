@@ -5,18 +5,25 @@ function getRandomInt(max) {
 let hobby=['foot','jeux video','basket','code','echec','Jardinage','Randonnee','Jouer de la guitard','pêcher','tatouage','musculation','danser','astronomie','cuisine','camping','cyclisme','plombier','grillades','calligraphie','photographie']
 function hobbyhasard(nrandom){
     let t=[];
-    for(let i=0;i<nrandom;i++){
-        t.push(hobby[getRandomInt(19)])
+    let i=0
+    while(i<nrandom){
+        let rhobby = hobby[getRandomInt(20)];
+        if(t.includes(rhobby)){
+            rhobby = hobby[getRandomInt(20)];
+        }
+        else{
+        t.push(rhobby)
+        i++
+        }
     }
     return t;
 }
 let a=[]
 for(let i=1;i<=1000;i++){
-    
-    
     a.push({
         id:uuidv4(),
         unsername:'username_'+i,
+        //doi:d,
         hobbys:hobbyhasard(getRandomInt(8)+3),
     })
 }
