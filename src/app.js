@@ -43,7 +43,7 @@ for(let i=1;i<=1000;i++){
         unsername:'username_'+i,
         doi:randomDates('01/01/2020','31/12/2022'),
         hobbys:hobbyhasard(getRandomInt(8)+3),
-        //dob:
+        dob:randomDates('01/01/1960','31/12/1990'),
     })
 }
 console.log(a)
